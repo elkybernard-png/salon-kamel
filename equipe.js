@@ -9,6 +9,7 @@ const teamShell = document.querySelector("#teamShell");
 const teamLogin = document.querySelector("#teamLogin");
 const teamLoginForm = document.querySelector("#teamLoginForm");
 const teamAccessCodeInput = document.querySelector("#teamAccessCode");
+const teamPlanning = document.querySelector("#teamPlanning");
 const teamStylist = document.querySelector("#teamStylist");
 const teamDate = document.querySelector("#teamDate");
 const agendaList = document.querySelector("#agendaList");
@@ -99,7 +100,7 @@ function hasTeamAccess() {
 function showTeamApp() {
   teamShell.classList.remove("locked");
   teamLogin.hidden = true;
-  window.scrollTo({ top: 0, behavior: "auto" });
+  teamPlanning.scrollIntoView({ block: "start", behavior: "auto" });
 }
 
 function showTeamLogin() {
@@ -235,7 +236,7 @@ teamLoginForm.addEventListener("submit", async (event) => {
 
   sessionStorage.setItem(teamSessionKey, "ok");
   await init();
-  window.scrollTo({ top: 0, behavior: "auto" });
+  teamPlanning.scrollIntoView({ block: "start", behavior: "auto" });
 });
 
 logoutTeam.addEventListener("click", () => {
