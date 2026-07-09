@@ -468,6 +468,27 @@ textarea:focus {
   color: var(--ink);
 }
 
+.map-card {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.map-card iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+.map-link {
+  display: inline-flex;
+  margin: 16px 18px 18px;
+  font-weight: 800;
+}
+
 .toast {
   position: fixed;
   right: 18px;
