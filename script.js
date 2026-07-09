@@ -42,18 +42,21 @@ const stylists = [
     name: "Sabrina",
     role: "Responsable du salon",
     specialty: "Coupes structurées, barbe, conseil personnalisé",
+    photo: "assets/staff-sabrina.png",
     days: [2, 3, 4, 5, 6]
   },
   {
     name: "Nadia",
     role: "Coloriste",
     specialty: "Couleurs, soins, brushing et transformations",
+    photo: "assets/staff-nadia.png",
     days: [2, 3, 5, 6]
   },
   {
     name: "Samir",
     role: "Coiffeur barbier",
     specialty: "Coupes homme, dégradés et finitions barbe",
+    photo: "assets/staff-samir.png",
     days: [3, 4, 5, 6]
   }
 ];
@@ -232,6 +235,7 @@ function renderStylists() {
     .map(
       (stylist) => `
         <article class="staff-card">
+          <img class="staff-photo" src="${stylist.photo}" alt="Portrait de ${stylist.name}" />
           <h3>${stylist.name}</h3>
           <p><strong>${stylist.role}</strong></p>
           <p>${stylist.specialty}</p>
