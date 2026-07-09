@@ -407,6 +407,13 @@ textarea:focus {
   line-height: 1.55;
 }
 
+.booking-note {
+  margin: -4px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;

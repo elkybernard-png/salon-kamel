@@ -332,10 +332,10 @@ function showToast(message) {
 
 function showBookingSaved(booking) {
   summary.innerHTML = `
-    <strong>Rendez-vous ajouté au planning.</strong><br />
-    ${booking.time} - ${booking.service} avec ${booking.stylist}<br />
-    Client : ${booking.clientName}<br />
-    <a href="equipe.html">Voir le planning équipe</a>
+    <strong>Votre demande de rendez-vous a bien été envoyée.</strong><br />
+    Créneau demandé : ${booking.time} - ${booking.service} avec ${booking.stylist}<br />
+    Nom : ${booking.clientName}<br />
+    Le salon vous recontactera si le créneau doit être confirmé ou ajusté.
   `;
 }
 
@@ -373,7 +373,7 @@ async function submitBooking(event) {
   const savedBooking = await createBooking(booking);
   cachedBookings.push(savedBooking);
   showBookingSaved(savedBooking);
-  showToast("Rendez-vous ajouté au planning équipe.");
+  showToast("Demande envoyée. Le salon pourra la consulter dans son planning.");
 }
 
 async function init() {
